@@ -1,0 +1,180 @@
+.contact_info {
+  padding: 30px;
+}
+.contact_info h1 {
+  font-size: 20px;
+}
+.contact_info .fle_box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card_forms {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+}
+.card_forms iframe {
+  width: 50%;
+  height: 450px;
+}
+.card_forms h1 {
+  font-size: 20px;
+}
+.card_forms #forma_tg {
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+  background-color: gainsboro;
+}
+.card_forms #forma_tg p {
+  margin: 10px 0 5px;
+}
+.card_forms #forma_tg input {
+  width: 100%;
+  height: 30px;
+  box-shadow: 0px 3px 10px -5px rgba(0, 0, 0, 0.6) inset;
+  border: 0;
+  border: 1px solid rgb(190, 190, 190);
+}
+.card_forms #forma_tg textarea {
+  width: 100%;
+  height: 100px;
+  box-shadow: 0px 3px 10px -5px rgba(0, 0, 0, 0.6) inset;
+  border: 1px solid rgb(190, 190, 190);
+}
+.card_forms button {
+  width: 100%;
+  height: 35px;
+  margin-top: 15px;
+  background-color: #d88516;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s ease;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=style.css.map */over {
+  color: black;
+}
+
+.result_price {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-price {
+  font-size: 20px;
+  font-weight: 400;
+}
+.total-price strong {
+  font-weight: 600;
+}
+
+.design {
+  width: 100%;
+  margin-top: 5px;
+  height: 35px;
+  border-radius: 6px;
+  border: 0;
+  background-color: #673d1d;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.design:hover {
+  background-color: gainsboro;
+  color: black;
+}
+
+.tg_forms {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(20, 20, 20, 0.6352941176);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  justify-content: center;
+  z-index: 0;
+}
+
+#orderForm {
+  position: relative;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.3411764706);
+  height: 100%;
+  padding: 30px 10px;
+  border-radius: 20px;
+  z-index: 9999;
+}
+#orderForm h1 {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+#orderForm input,
+#orderForm select,
+#orderForm textarea {
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #673d1d;
+  padding: 0 0 0 5px;
+}
+#orderForm .basket_form {
+  display: none;
+  height: 1px !important;
+}
+#orderForm button {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  border-radius: 8px;
+  border: 0;
+  font-size: 14px;
+  background-color: #673d1d;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+#orderForm button:hover {
+  background-color: rgb(9, 110, 114);
+  color: rgb(255, 255, 255);
+}
+#orderForm .back {
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  left: 3%;
+  top: 4%;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s ease;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(900deg); /* Примерный перекрас через фильтры */
+}
+#orderForm .back:hover {
+  color: black;
+}
+#orderForm div {
+  display: flex;
+  gap: 5px;
+}/*# sourceMappingURL=style.css.map */

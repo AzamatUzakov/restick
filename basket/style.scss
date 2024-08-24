@@ -1,0 +1,219 @@
+.main_basket_box {
+    padding: 30px;
+    width: 100%;
+
+    h2 {
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+.main_cartBox {
+    width: 50%;
+
+}
+
+.cart-item {
+    display: flex;
+    gap: 30px;
+
+}
+
+.titleElement {
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+
+}
+
+.hr {
+    margin: 15px 0;
+    border-bottom: -0px;
+}
+
+.quantityContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.min,
+.plus {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 0;
+    padding-bottom: 5px;
+    background-color: rgb(86, 245, 86);
+    transition: .4s ease;
+
+    &:hover {
+        color: black;
+    }
+}
+
+.num {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.danger {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 0;
+    padding-bottom: 5px;
+    background-color: rgb(255, 0, 0);
+    transition: .4s ease;
+    rotate: 45deg;
+
+    &:hover {
+        color: black;
+    }
+}
+
+
+.result_price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: 400;
+
+    strong {
+        font-weight: 600;
+    }
+}
+
+.design {
+    width: 100%;
+    margin-top: 5px;
+    height: 35px;
+    border-radius: 6px;
+    border: 0;
+    background-color: #673d1d;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .4s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: gainsboro;
+        color: black;
+    }
+}
+
+
+
+.tg_forms {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #141414a2;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: none;
+    backdrop-filter: blur(12px);
+    justify-content: center;
+    z-index: 0;
+}
+
+#orderForm {
+    position: relative;
+    width: 400px;
+    background-color: #ffffff57;
+    height: 100%;
+    padding: 30px 10px;
+    border-radius: 20px;
+    z-index: 9999;
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        margin-top: 10px;
+        height: 40px;
+        border-radius: 10px;
+        border: 2px solid #673d1d;
+        padding: 0 0 0 5px;
+
+    }
+
+    .basket_form {
+        display: none;
+        height: 1px !important;
+    }
+
+    button {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        border-radius: 8px;
+        border: 0;
+        font-size: 14px;
+        background-color: #673d1d;
+        color: white;
+        cursor: pointer;
+        transition: .4s ease;
+
+        &:hover {
+            background-color: rgb(9, 110, 114);
+            color: rgb(255, 255, 255);
+        }
+
+    }
+
+    .back {
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        left: 3%;
+        top: 4%;
+        font-weight: 500;
+        cursor: pointer;
+        transition: .4s ease;
+            filter: invert(1) sepia(1) saturate(5) hue-rotate(900deg); /* Примерный перекрас через фильтры */
+        
+                &:hover {
+            color: black;
+        }
+    }
+
+    div {
+        display: flex;
+        gap: 5px;
+    }
+}

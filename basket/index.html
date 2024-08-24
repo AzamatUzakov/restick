@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="/style.scss">
+  <link rel="stylesheet" href="./style.scss">
+  <link rel="stylesheet" href="/media.scss">
+</head>
+
+<body>
+  <header>
+
+    <div class="BG_video">
+      <video id="myVideo" style="object-fit: cover;" width="100%" height="100%" autoplay muted loop controls>
+        <source src="/video/IMG_0132.MOV" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="heaed_padding">
+      <div class="top_lkn_box">
+        <img width="100px" src="/public/photo_2024-08-13_21-16-56-removebg-preview.png" class="logo" alt="">
+
+        <div class="basket_box">
+          <img width="40px" src="/public/goods basket.svg" alt="">
+          <p class="you_zakaz">Ваш заказ пока пуст</p>
+        </div>
+
+        <div class="tel_box">
+          <img width="40px" src="/public/phone.svg" alt="">
+
+          <div class="tel_num">
+            <h2>8 996 636 06 96 </h2>
+            <i>Работаем 24/7</i>
+          </div>
+        </div>
+      </div>
+
+      <div class="katalog_box">
+        <a href="/index.html">Продукты</a>
+        <a href="/alcohol/index.html">Алкоголь</a>
+        <a href="/fresh/index.html">Напитки</a>
+        <a href="/сontacts/index.html">Контакты</a>
+        <a href="./index.html">Корзина</a>
+      </div>
+
+      <div class="menu_mobi">
+        <div class="burger_menu"><img style="display:block;" class="br_icon" src="/public/burger.svg" alt="">
+          <img style="display: none;" class="X_icon" src="/public/x-symbol.png" alt="">
+          <p>Меню</p>
+        </div><br>
+        <a href="./index.html">Продукты</a><br> <br>
+        <a href="/alcohol/index.html">Алкоголь</a><br><br>
+        <a href="/fresh/index.html">Напитки</a><br><br>
+        <a href="./index.html">Корзина</a><br><br>
+        <a class="nth" href="/сontacts/index.html">Контакты</a>
+      </div>
+
+      <div class="word_center">
+        Рады видеть вас на нашем сайте! <br>
+        Служба доставка "Купим привезём 24/7" доставим все что вы хотите , с уважением Ночной Томск
+      </div>
+    </div>
+  </header>
+  <div class="main_basket_box">
+
+    <h2>Корзина <img width="30px" src="/public/goods basket.svg" alt=""></h2>
+    <br>
+    <br>
+    <div class="cart-items"></div>
+    <div class="result_price">
+      <div>
+        <p class="total-price">Итого: 0 руб.</p>
+        <button class="design" id="submitOrder">Оформить</button>
+      </div>
+
+    </div>
+    <div class="tg_forms">
+      <form id="orderForm">
+        <img width="30px" class="back" src="/public/undo_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        <h1>Заполните форму</h1>
+        <div><input type="text" name="firstName" placeholder="Имя" required>
+          <input type="text" name="lastName" placeholder="Фамилия" required>
+        </div>
+
+        <div> <input type="text" name="phone" placeholder="Телефон" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div><input type="number" name="peopleCount" placeholder="Кол-во персон" required>
+          <input type="text" name="deliveryAddress" placeholder="Адрес доставки" required>
+        </div><input type="text" name="apartment" placeholder="Квартира">
+        <div><input type="text" name="entrance" placeholder="Подъезд">
+          <input type="text" name="floor" placeholder="Этаж">
+        </div><select name="paymentMethod" required>
+          <option value="" disabled selected>Выберите способ оплаты</option>
+          <option value="card">Карта</option>
+          <option value="cash">Наличка</option>
+        </select><br>
+        <textarea name="comment" placeholder="Комментарий"></textarea><br>
+        <textarea class="basket_form" name="cart" placeholder="Содержимое корзины" readonly></textarea><br>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+
+
+
+    <div class="main_cartBox">
+      <div class="cart-item">
+      </div>
+    </div>
+
+    
+  </div>
+  <footer style="margin-top: 30px;">
+
+    <div class="left_block">
+      <p>© Ночной Томск, 2023—2024 </p>
+      <p><strong>Адрес:</strong> г. Томск, ул. Смирнова 5</p>
+      <p><strong>Телефон:</strong> 8 996 636 06 96</p>
+      <br>
+      <br>
+      <p>Разработка сайтов - <a href="https://pixel-crafters.netlify.app/">Веб-студия Pixel-Crafters</a></p>
+    </div>
+
+    <div class="middle_block">
+      <h4>Меню кафе</h4><br>
+      <a href="/fresh/index.html">Напитки</a><br><br>
+      <a href="/index.html">Продукты</a><br><br>
+      <a href="/alcohol/index.html">Алкоголь</a>
+    </div>
+
+    <div class="right_block">
+      <h4>Мы в Соцсетях</h4>
+      <div class="tg_mail_vk_box">
+        <img width="30px" src="/public/vk.svg" alt="">
+        <img width="30px" src="/public/inst.svg" alt="">
+        <img width="30px" src="/public/telegram.svg" alt="">
+      </div>
+      <p>По всем вопросам:</p>
+      <div class="black_inst_vk">
+        <img width="30px" src="/public/black-inst.png" alt="">
+        <img width="30px" src="/public/./black-vk.png" alt="">
+      </div>
+    </div>
+
+
+  </footer>
+  <script src="basket.js"></script>
+  <script src="/main.js"></script>
+</body>
+
+</html>
