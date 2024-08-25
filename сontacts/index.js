@@ -1,4 +1,4 @@
-document.getElementById('forma_tg').addEventListener('submit', function(event) {
+document.getElementById('forma_tg').addEventListener('submit', function (event) {
     event.preventDefault(); // Предотвращаем отправку формы по умолчанию
 
     // Получаем значения полей формы
@@ -33,20 +33,20 @@ document.getElementById('forma_tg').addEventListener('submit', function(event) {
             text: message,
         }),
     })
-    .then(response => {
-        console.log('Статус ответа:', response.status); // Выводим статус ответа
-        return response.json();
-    })
-    .then(data => {
-        console.log('Ответ от Telegram API:', data); // Выводим полный ответ
-        if (data.ok) {
-            alert('Сообщение успешно отправлено!');
-        } else {
+        .then(response => {
+            console.log('Статус ответа:', response.status); // Выводим статус ответа
+            return response.json();
+        })
+        .then(data => {
+            console.log('Ответ от Telegram API:', data); // Выводим полный ответ
+            if (data.ok) {
+                alert('Сообщение успешно отправлено!');
+            } else {
+                alert('Ошибка при отправке сообщения. Попробуйте снова.');
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка при отправке запроса:', error); // Выводим ошибку
             alert('Ошибка при отправке сообщения. Попробуйте снова.');
-        }
-    })
-    .catch(error => {
-        console.error('Ошибка при отправке запроса:', error); // Выводим ошибку
-        alert('Ошибка при отправке сообщения. Попробуйте снова.');
-    });
+        });
 });

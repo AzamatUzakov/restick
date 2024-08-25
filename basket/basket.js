@@ -5,12 +5,12 @@ let design = document.querySelector('.design');
 let tg_forms = document.querySelector('.tg_forms');
 let back = document.querySelector('.back');
 
-design.onclick = () => {
+/* design.onclick = () => {
     tg_forms.style.display = "flex";
-};
-back.onclick = () => {
+}; */
+/* back.onclick = () => {
     tg_forms.style.display = "none";
-};
+}; */
 
 function renderCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -25,10 +25,10 @@ function renderCart() {
         const posterImg = document.createElement('img');
         const titleElement = document.createElement('p');
         const quantityContainer = document.createElement('div');
-        const minusBtn = document.createElement('button');
+        const minusBtn = document.createElement('img');
         const quantityElement = document.createElement('span');
-        const plusBtn = document.createElement('button');
-        const removeBtn = document.createElement('button');
+        const plusBtn = document.createElement('img');
+        const removeBtn = document.createElement('img');
         let hr = document.createElement('hr');
 
         posterImg.alt = '';
@@ -36,18 +36,18 @@ function renderCart() {
         posterImg.style.width = '150px';
         quantityElement.innerHTML = item.quantity;
         titleElement.innerHTML = `${item.title} - ${item.price} руб.`;
-        minusBtn.innerHTML = '-';
-        plusBtn.innerHTML = '+';
-        removeBtn.innerHTML = '+';
+        minusBtn.src = "/public/delete (1).png"
+        plusBtn.src = "/public/delete (2).png"
+        removeBtn.src = "/public/free-icon-delete-button-5974771.png"
 
         main_cartBox.classList.add('main_cartBox');
         quantityContainer.classList.add('quantityContainer');
         descriotion_goods.classList.add('descriotion_goods');
         itemElement.classList.add('cart-item');
-        minusBtn.classList.add("min");
-        quantityElement.classList.add("num");
-        plusBtn.classList.add("plus");
-        removeBtn.classList.add("danger");
+/*         minusBtn.classList.add("min");
+ */        quantityElement.classList.add("num");
+       /*  plusBtn.classList.add("plus");
+        removeBtn.classList.add("danger"); */
         hr.classList.add('hr');
         titleElement.classList.add('titleElement');
 
@@ -81,6 +81,11 @@ function renderCart() {
     });
 
     totalPriceElement.innerHTML = `<b>Итого:</b> ${total} руб.`;
+    if (cart.length === 0) {
+        orderForm.style.display = "none"
+    } else {
+        orderForm.style.display = "block"
+    }
 }
 
 function updateCart(cart) {
@@ -145,7 +150,10 @@ ${cartItems}
         .then(response => response.json())
         .then(data => {
             if (data.ok) {
-                tg_forms.style.display = "none";
+                tg_forms.innerHTML = "Отправленно";
+                localStorage.clear();
+                location.reload();
+
             } else {
                 alert('Ошибка отправки сообщения.');
             }
